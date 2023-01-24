@@ -10,11 +10,11 @@
 
                 <div class="card-body d-flex justify-conten-between">
                     <div class="flex-fill">
-                        <div>{{$train->departure_time}}</div>
+                        <div class="fs-4 text-success fw-bold">{{date("H:i", strtotime($train->departure_time))}}</div>
                         <h5>{{$train->departure_station}}</h5>
                     </div>
                     <div class="flex-fill text-end">
-                        <div>{{$train->arrival_time}}</div>
+                        <div class="fs-4 text-success fw-bold">{{date("H:i", strtotime($train->arrival_time))}}</div>
                         <h5>{{$train->arrival_station}}</h5>
                     </div>
                 </div>
