@@ -9,10 +9,13 @@ class PageController extends Controller
 {
     function index(){
 
-        $trains =  Train::all();
+        // $trains = Train::all();
+        $trains = Train::where('departure_time', 'LIKE', '2023-01-24%')->get();
 
         dump($trains);
 
-        return view('home');
+        return view('home', [
+            'trains' => $trains
+        ]);
     }
 }
